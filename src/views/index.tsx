@@ -1,7 +1,7 @@
 import * as Project from "./projects";
-import * as auth from "./auth"
+import {Login} from "./auth/login/Login"
 
 export{
   Project,
-  auth
+  Login
 }

@@ -13,7 +13,7 @@ export const Routes_dashboard = () => {
   return (
     <section>
       <section>
-        <Component.Navigations />
+        <Component.Navigations  />
       </section>
       <NavSide className='nav_side'>
         <Component.Navigations_side />
@@ -24,10 +24,10 @@ export const Routes_dashboard = () => {
           <Routes>
             <Route path="projects" element={<Projects />} />
             <Route path="projects/new" element={<Projects_new />} />
-            <Route
+            {/* <Route
                 path="*"
                 element={<Navigate to="projects" />}
-            />
+            /> */}
           </Routes>
         </Suspense>
       </StyledRouter>
@@ -43,5 +43,5 @@ position:fixed;
 
 const StyledRouter = styled.section `
 transition: 300ms;
-margin-left:90px ;
+margin-left:94px ;
 `

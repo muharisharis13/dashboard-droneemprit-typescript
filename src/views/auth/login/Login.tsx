@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from "styled-components";
 import {Bg,Logo} from "../../../assets";
 import {Helmet} from "react-helmet";
@@ -7,42 +7,8 @@ import {Helmet} from "react-helmet";
 
 export const Login = () => {
 
-	
-	const  loginBtn:any = document.querySelectorAll(".login-btn"),
-	registerBtn:any = document.querySelectorAll(".register-btn"),
-	lostPassBtn:any = document.querySelectorAll(".lost-pass-btn"),
-	box:any = document.querySelector(".box"),
-	loginForm:any = document.querySelector(".login-form"),
-	registerForm:any = document.querySelector(".register-form"),
-	lostPasswordForm:any = document.querySelector(".lost-password-form");
 
-registerBtn.forEach((btn:any) =>{
- btn.addEventListener("click",() =>{
-	 box.classList.add("slide-active");
-	 registerForm.classList.remove("form-hidden");
-	 loginForm.classList.add("form-hidden");
-	 lostPasswordForm.classList.add("form-hidden");
- });
-});
-
-loginBtn.forEach((btn:any) =>{
- btn.addEventListener("click",() =>{
-	 box.classList.remove("slide-active");
-	 registerForm.classList.add("form-hidden");
-	 loginForm.classList.remove("form-hidden");
-	 lostPasswordForm.classList.add("form-hidden");
- });
-});
-
-lostPassBtn.forEach((btn:any) =>{
- btn.addEventListener("click",() =>{
-	 registerForm.classList.add("form-hidden");
-	 loginForm.classList.add("form-hidden");
-	 lostPasswordForm.classList.remove("form-hidden");
- });
-});
-
-
+const [username, setUsername] = useState<string>("")
 
 	  
   
@@ -66,7 +32,7 @@ lostPassBtn.forEach((btn:any) =>{
             <div className="login-form">
               <h3>Log In</h3>
               <div className="form-group">
-                <input type="text" placeholder="Email Address*" className="form-control"/>
+                <input type="text" placeholder="Email Address*" className="form-control" value={username} onChange={(e)=>setUsername(e.target.value)} />
               </div>
               <div className="form-group">
                 <input type="password" placeholder="Password*" className="form-control"/>
@@ -194,7 +160,7 @@ const Container = styled.div `
   border:1px solid #ffffff;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .login-page .box .left .register-btn:focus,
@@ -254,11 +220,10 @@ const Container = styled.div `
 .login-page .box .form .submit-btn{
 	width: 100%;
 	height: 40px;
-	background-color: #02c5a7;
+	background-color: #0078D4;
 	border:none;
-	border-radius: 20px;
+	border-radius: 5px;
 	color:#ffffff;
-	text-transform: uppercase;
 	margin-top:10px;
 	font-size: 16px;
 	cursor: pointer;

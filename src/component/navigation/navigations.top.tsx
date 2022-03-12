@@ -1,43 +1,53 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components"
-import * as Button from "../button";
+import {Button_top_nav} from "../button/button.top.nav";
 import * as assets from "../../assets"
 
 
 const data_nav = [
   {
-    icon:"sqeure-double",
+    icon:"icon-sqeure-double",
     name:"Gallery",
-    path:"/gallery"
+    path:"/dashboard/gallery"
   },
   {
-    icon:null,
+    icon:"icon-chart-multiple",
     name:"Report Builder",
-    path:"/report_builder"
+    path:"/dashboard/report_builder"
   },
   {
-    icon:null,
+    icon:"icon-history",
     name:"History",
-    path:"/history"
+    path:"/dashboard/history"
   },
   {
-    icon:null,
+    icon:"icon-shape",
     name:"My Template",
-    path:"/my_template"
+    path:"/dashboard/my_template"
   },
   {
-    icon:null,
+    icon:"icon-vector",
     name:"Scenario",
-    path:"/scenario"
+    path:"/dashboard/scenario"
   },
 ]
 
 export const Navigations_top = () => {
+  const [active, setActive] = useState<string>("")
+
   return (
     <Container>
       {
         data_nav.map((item:any,idx:number)=>(
-          <Button.Button_top_nav key={idx} to={item.path}><i className={item.icon}></i>{item.name}</Button.Button_top_nav>
+          <Button_top_nav 
+            key={idx} 
+            to={item.path}
+            onClick={()=>setActive(item.path)}
+            active={active === item.path ? true:false}
+            >
+              <i className={item.icon} />
+              {item.name}
+          </Button_top_nav>
         ))
       }
     </Container>
