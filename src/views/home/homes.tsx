@@ -1,22 +1,23 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../style";
-import * as component from "../../component"
+import * as component from "../../component";
+import {thumbnail} from "../../assets"
 
  const Homes = () => {
   return (
     <ContainerHomes>
       <section className="wrap-template-theme">
         <div className="title">
-          Template Theme
+          Last Template
         </div>
         <div className="list-template">
           {
-            [2,2,2,2,2,2,2,2,2,2].map((item:any, idx:number)=>(
+            [2,2,2,2,2,2].map((item:any, idx:number)=>(
               <div className="thmb-template" key={idx}>
-                <img src="https://images.unsplash.com/photo-1504691342899-4d92b50853e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                <img src={thumbnail} alt="" />
                 <div className="captions-template">
-                  Lorem ipsum.
+                  Lorem ipsum
                 </div>
               </div>
             ))
@@ -24,9 +25,9 @@ import * as component from "../../component"
         </div>
       </section>
 
-      <section className="wrap-table-data">
+      {/* <section className="wrap-table-data">
         asdasdad
-      </section>
+      </section> */}
     </ContainerHomes>
   )
 }
@@ -49,6 +50,7 @@ const ContainerHomes = styled(Container) `
         width: 153px;
         height: 89.26px;
         object-fit: cover;
+        cursor:pointer;
       }
 
       .captions-template{
@@ -67,7 +69,7 @@ const ContainerHomes = styled(Container) `
       justify-content: center;
     }
     display: flex;
-    grid-gap: 0.6rem;
+    grid-gap: 3rem;
     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
     flex-wrap:wrap;
   }
@@ -80,7 +82,7 @@ const ContainerHomes = styled(Container) `
     line-height: 19px;
     letter-spacing: 0.3px;
     color: #252733;
-    margin-bottom:16px;
+    margin-bottom:36px;
   }
 }
 `
