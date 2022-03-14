@@ -1,7 +1,8 @@
-import * as Project from "./projects";
-import {Login} from "./auth/login/Login"
+
+import {Login} from "./auth/login/Login";
+import Homes from "./home/homes"
 
 export{
-  Project,
-  Login
+  Login,
+  Homes
 }

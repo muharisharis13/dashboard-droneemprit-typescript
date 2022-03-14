@@ -26,7 +26,7 @@ const data_nav =[
 ]
 
 export const Navigations_side = (props:Props) => {
-  const [active, setActive] = useState<string>("")
+  const [active, setActive] = useState<string>(window.location.pathname)
   
   return (
     <Container>
@@ -38,7 +38,7 @@ export const Navigations_side = (props:Props) => {
             key={idx}
             onClick={()=>setActive(item.path)}
           >
-            <i className={item.icon} />
+            <i className={item.icon} style={{fontSize:"15pt"}} />
             {item.name}
           </Link_Nav>
         ))
@@ -86,5 +86,6 @@ const Container = styled.div `
   height:100vh ;
   width:94px ;
   overflow:hidden ;
+  z-index:1000;
 
 `

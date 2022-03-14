@@ -34,10 +34,10 @@ const Button = styled(Link)<{active:boolean}>`
  line-height: 20px;
  
  background-color:${({active})=> active ? color.C_FFFFFF :"transparent"} ;
- color:${({active})=> active ? color.C_0078D4 : color.C_FFFFFF};
+ color:${({active})=> active ? color.C_F13929 : color.C_FFFFFF};
 &:hover{
   background-color:${color.C_FFFFFF} ;
-  color:${color.C_0078D4};
+  color:${color.C_F13929};
 }
 
 `

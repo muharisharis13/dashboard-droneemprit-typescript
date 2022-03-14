@@ -56,5 +56,4 @@ export const Navigations_top = () => {
 
 const Container = styled.div `
   display:flex ;
-
 `
