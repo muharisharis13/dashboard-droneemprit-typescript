@@ -33,7 +33,7 @@ const data_nav = [
 ]
 
 export const Navigations_top = () => {
-  const [active, setActive] = useState<string>("")
+  const [active, setActive] = useState<string>(window.location.pathname)
 
   return (
     <Container>
@@ -43,7 +43,7 @@ export const Navigations_top = () => {
             key={idx} 
             to={item.path}
             onClick={()=>setActive(item.path)}
-            active={active === item.path ? true:false}
+            active={window.location.pathname === item.path ? window.location.pathname:""}
             >
               <i className={item.icon} />
               {item.name}

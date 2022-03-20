@@ -7,7 +7,7 @@ interface Props{
 children:any,
 to:string,
 onClick:Function,
-active:boolean
+active:string
 }
 export const Button_top_nav = (props:Props) => {
   const {children,to,onClick,active} = props
@@ -19,7 +19,7 @@ export const Button_top_nav = (props:Props) => {
   )
 }
 
-const Button = styled(Link)<{active:boolean}>`
+const Button = styled(Link)<{active:string}>`
  border:thin solid transparent ;
  transition:300ms ;
  cursor:pointer ; 
@@ -33,8 +33,8 @@ const Button = styled(Link)<{active:boolean}>`
  font-size: 14px;
  line-height: 20px;
  
- background-color:${({active})=> active ? color.C_FFFFFF :"transparent"} ;
- color:${({active})=> active ? color.C_F13929 : color.C_FFFFFF};
+ background-color:${({active})=> active === window.location.pathname ? color.C_FFFFFF :"transparent"} ;
+ color:${({active})=> active ===window.location.pathname ? color.C_F13929 : color.C_FFFFFF};
 &:hover{
   background-color:${color.C_FFFFFF} ;
   color:${color.C_F13929};

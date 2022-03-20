@@ -31,9 +31,12 @@ export const Navigations = (props:Props) => {
 
   return (
     <Container>
-      <section className="row_0">
-        <Navigations_side />
-      </section>
+      {
+        window.location.pathname === "/dashboard/report_builder" ? null :
+          <section className="row_0">
+            <Navigations_side />
+          </section>
+      }
       <section className="row_1">
         <div className="left">
           <img src={assets.Logo} alt="" />
@@ -67,7 +70,7 @@ const Container = styled.div `
 .row_0{
   position: fixed;
   left:0;
-  top:71px;
+  top:80px;
   z-index:99999999999;
 }
 
@@ -96,6 +99,7 @@ const Container = styled.div `
     }
   }
 };
+z-index: 999;
 position: fixed;
 width: 100%;
 background-color:${color.C_F13929};
@@ -105,6 +109,6 @@ padding-top:10px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-height:71px;
+/* height:80px; */
 /* overflow:hidden; */
 `

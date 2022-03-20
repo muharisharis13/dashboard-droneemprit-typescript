@@ -2,7 +2,9 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../style";
 import * as component from "../../component";
-import {thumbnail} from "../../assets"
+import {thumbnail,Powerpoint} from "../../assets"
+
+const header = ["Client", "File Name", "Last Opened", "Account"]
 
  const Homes = () => {
   return (
@@ -25,9 +27,40 @@ import {thumbnail} from "../../assets"
         </div>
       </section>
 
-      {/* <section className="wrap-table-data">
-        asdasdad
-      </section> */}
+      <section className="wrap-table-data">
+        <div className="search">
+          <component.Search />
+        </div>
+        <div className="tables">
+          <component.Tables header={header}>
+            {
+              [2,2,2,2].map((item:any,idx:number)=>(
+                <tbody key={idx}>
+                  <tr>
+                    <td rowSpan={3}>spanrow</td>
+                    <td><img src={Powerpoint} /> aaaa</td>
+                    <td>aaaa</td>
+                    <td>aaaa</td>
+                  </tr>
+                  <tr>
+                    <td><img src={Powerpoint} /> aaaa</td>
+                    <td>aaaa</td>
+                    <td>aaaa</td>
+                  </tr>
+                  <tr>
+                    <td><img src={Powerpoint} /> aaaa</td>
+                    <td>aaaa</td>
+                    <td>aaaa</td>
+                  </tr>
+                </tbody>
+              ))
+            }
+          </component.Tables>
+        </div>
+        <div className="paginations">
+          <component.Pagination />
+        </div>
+      </section>
     </ContainerHomes>
   )
 }
@@ -39,7 +72,27 @@ export default Homes;
 const ContainerHomes = styled(Container) `
 
 .wrap-table-data{
+  .search{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .paginations{
+    margin-top:20px;
+    display:flex;
+    align-items: center;
+    justify-content:flex-end;
+  }
+  .tables{
+    margin-top:20px;
+  }
   background-color: ${component.Color.C_FFFFFF};
+  margin-top:30px;
+  padding:37px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-bottom:100px;
 }
 
 .wrap-template-theme{

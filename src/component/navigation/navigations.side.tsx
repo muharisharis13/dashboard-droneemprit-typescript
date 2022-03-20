@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled,{css} from "styled-components"
 import { C_FFFFFF, C_F13928,C_AF261A} from '../color/index'
 import {Link} from "react-router-dom"
@@ -27,12 +27,17 @@ const data_nav =[
 
 export const Navigations_side = (props:Props) => {
   const [active, setActive] = useState<string>(window.location.pathname)
-  
+  const [show, setShow] = useState<string>("")
+
+
+  useEffect(()=>{
+    setShow(window.location.pathname)
+  },[window.location.pathname])
   return (
     <Container>
       {
         data_nav.map((item:any,idx:number) =>(
-          <Link_Nav active={item.path === active ? true:false}  
+          <Link_Nav active={item.path === window.location.pathname ? window.location.pathname:""}  
             to={item.path} 
             className="navigation-btn" 
             key={idx}
@@ -48,9 +53,9 @@ export const Navigations_side = (props:Props) => {
 }
 
 
-const Link_Nav = styled(Link)<{active:boolean}> `
+const Link_Nav = styled(Link)<{active:string}> `
 ${({active})=>
-  active ?
+  active === window.location.pathname ?
   css `
     background-color:${C_AF261A};
     color:${C_FFFFFF}

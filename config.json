@@ -55,37 +55,27 @@
       ]
     },
     {
-      "uid": "b0a4ae01ae576073255f601c9906493e",
-      "css": "vector",
-      "code": 59396,
-      "src": "custom_icons",
-      "selected": true,
-      "svg": {
-        "path": "M608.9 0H112.3C66.8 0 29.5 40.9 29.5 90.9V727.3H112.3V90.9H608.9V0ZM567.5 181.8L815.8 454.5V909.1C815.8 959.1 778.5 1000 733 1000H277.4C231.9 1000 195 959.1 195 909.1L195.5 272.7C195.5 222.7 232.3 181.8 277.8 181.8H567.5ZM526.1 500H753.7L526.1 250V500Z",
-        "width": 857
-      },
-      "search": [
-        "vector"
-      ]
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "css": "search",
+      "code": 59400,
+      "src": "entypo"
     },
     {
-      "uid": "0808974dd9edcfc89b46f4aed9622390",
-      "css": "home",
-      "code": 59397,
-      "src": "custom_icons",
-      "selected": true,
-      "svg": {
-        "path": "M440 0L0 333.3V1000H275V611.1H605V1000H880V333.3L440 0Z",
-        "width": 880
-      },
-      "search": [
-        "home"
-      ]
+      "uid": "c8585e1e5b0467f28b70bce765d5840c",
+      "css": "docs",
+      "code": 61637,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bbd66ef66bb8fa9edde54d9a90b89150",
+      "css": "user-1",
+      "code": 59404,
+      "src": "entypo"
     },
     {
       "uid": "1ee03ecfce3dc22fd0149370ce01a2a8",
       "css": "plus",
-      "code": 59398,
+      "code": 59405,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -99,7 +89,7 @@
     {
       "uid": "5f86addc1cc2ffef4d02b281830a817f",
       "css": "sqeure-double",
-      "code": 59399,
+      "code": 59414,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -111,15 +101,9 @@
       ]
     },
     {
-      "uid": "7222571caa5c15f83dcfd447c58d68d9",
-      "css": "search",
-      "code": 59400,
-      "src": "entypo"
-    },
-    {
       "uid": "d133ac9129c2f62acdd7625ff672c718",
       "css": "add-file",
-      "code": 59401,
+      "code": 59415,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -133,7 +117,7 @@
     {
       "uid": "f60f46eeca6732f031b14bd080689c35",
       "css": "user-setting",
-      "code": 59402,
+      "code": 59416,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -147,7 +131,7 @@
     {
       "uid": "c3f27d1806b949f234e09a10123421cb",
       "css": "out",
-      "code": 59403,
+      "code": 59417,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -159,21 +143,9 @@
       ]
     },
     {
-      "uid": "c8585e1e5b0467f28b70bce765d5840c",
-      "css": "docs",
-      "code": 61637,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "bbd66ef66bb8fa9edde54d9a90b89150",
-      "css": "user",
-      "code": 59404,
-      "src": "entypo"
-    },
-    {
       "uid": "ec2b105d2492d2bf8e34270a1de3bd9a",
-      "css": "user-1",
-      "code": 59405,
+      "css": "user-2",
+      "code": 59418,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -183,6 +155,60 @@
       "search": [
         "user"
       ]
+    },
+    {
+      "uid": "f49b50e6731d1fba81f00c17972c680e",
+      "css": "insert-drive-file",
+      "code": 59419,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M250 83.3C204.2 83.3 167.1 120.8 167.1 166.7L166.7 833.3C166.7 879.2 203.7 916.7 249.6 916.7H750C795.8 916.7 833.3 879.2 833.3 833.3V333.3L583.3 83.3H250ZM541.7 375V145.8L770.8 375H541.7Z",
+        "width": 1000
+      },
+      "search": [
+        "insert-drive-file"
+      ]
+    },
+    {
+      "uid": "0808974dd9edcfc89b46f4aed9622390",
+      "css": "home",
+      "code": 59422,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M440 0L0 333.3V1000H275V611.1H605V1000H880V333.3L440 0Z",
+        "width": 880
+      },
+      "search": [
+        "home"
+      ]
+    },
+    {
+      "uid": "b0a4ae01ae576073255f601c9906493e",
+      "css": "vector",
+      "code": 59423,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M608.9 0H112.3C66.8 0 29.5 40.9 29.5 90.9V727.3H112.3V90.9H608.9V0ZM567.5 181.8L815.8 454.5V909.1C815.8 959.1 778.5 1000 733 1000H277.4C231.9 1000 195 959.1 195 909.1L195.5 272.7C195.5 222.7 232.3 181.8 277.8 181.8H567.5ZM526.1 500H753.7L526.1 250V500Z",
+        "width": 857
+      },
+      "search": [
+        "vector"
+      ]
+    },
+    {
+      "uid": "b714be5a812a474811604f700dfc87ce",
+      "css": "left-open",
+      "code": 61447,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "37910a1398001a5ccb541cb2a253a2c7",
+      "css": "right-open",
+      "code": 61446,
+      "src": "mfglabs"
     }
   ]
 }
